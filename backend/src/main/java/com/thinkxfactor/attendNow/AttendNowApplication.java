@@ -35,4 +35,18 @@ class TestController {
 		return "Login Successful";
 		// return "Login Failed";
 	}
+
+	@GetMapping("/tests/{name}/{dept}/{year}")
+	public String testNames(String dept, String name,@PathVariable("year") byte yr){
+		return "Hello there " + name + dept + yr;
+	}
+	// @GetMapping("/tests/{name}")
+	// public String testNames(@PathVariable String name){
+	// 	return "Hello there " + name;
+	// }
+
+	@GetMapping("/evenMoreTest")
+	public String moreTests(String t1, boolean t2){
+		return t1+" "+t2;
+	}
 }
